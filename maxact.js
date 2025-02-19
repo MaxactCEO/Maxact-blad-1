@@ -409,7 +409,7 @@
       spinner.className = 'loading-spinner';
       submitButton.parentNode.appendChild(spinner);
   
-      const data1 = new data1(form);
+      const Maxact blad = new Maxact data(form);
       const habitData = Object.fromEntries(formData.entries());
   
       // Lägg till i recentHabits och uppdatera visningen
@@ -423,7 +423,7 @@
       // Skicka data till Google Apps Script
       const response = await fetch("https://script.google.com/macros/s/AKfycbyis6zabTJhr6wuxW6XwF7Pm6wzJxHoLiQ2IGYAlGzvrxzswHFArPRbQcvSb2Egc1_a7A/exec", {
         method: "POST",
-        body: data1
+        body: Maxact data
       });
   
       const data = await response.json();
