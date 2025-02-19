@@ -421,9 +421,9 @@
       incrementHabitUsage(habitData.Kategori);
   
       // Skicka data till Google Apps Script
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxvWY9t1hfT5txeHh8nuUaVI9RG8uAQArdOEl8fWwIc827kgIijn1VFtCA8EkpT0OR1/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyis6zabTJhr6wuxW6XwF7Pm6wzJxHoLiQ2IGYAlGzvrxzswHFArPRbQcvSb2Egc1_a7A/exec", {
         method: "POST",
-        body: formData
+        body: Data1
       });
   
       const data = await response.json();
