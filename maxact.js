@@ -423,7 +423,7 @@
       // Skicka data till Google Apps Script
       const response = await fetch("https://script.google.com/macros/s/AKfycbyis6zabTJhr6wuxW6XwF7Pm6wzJxHoLiQ2IGYAlGzvrxzswHFArPRbQcvSb2Egc1_a7A/exec", {
         method: "POST",
-        body: Data1
+        body: data1
       });
   
       const data = await response.json();
