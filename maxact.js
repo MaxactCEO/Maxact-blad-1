@@ -409,7 +409,7 @@
       spinner.className = 'loading-spinner';
       submitButton.parentNode.appendChild(spinner);
   
-      const formData = new FormData(form);
+      const data1 = new data1(form);
       const habitData = Object.fromEntries(formData.entries());
   
       // Lägg till i recentHabits och uppdatera visningen
