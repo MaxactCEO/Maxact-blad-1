@@ -362,12 +362,6 @@
   
   let habitUsageCount = JSON.parse(localStorage.getItem('habitUsageCount')) || {};
   
-/*************  ✨ Codeium Command ⭐  *************/
-  /**
-   * Increment the count for a given habit category in local storage.
-   * @param {string} habitCategory - The category of habit to increment.
-   */
-/******  497b488a-90d2-4a22-a4b2-de2e9fe922b0  *******/
   function incrementHabitUsage(habitCategory) {
     habitUsageCount[habitCategory] = (habitUsageCount[habitCategory] || 0) + 1;
     localStorage.setItem('habitUsageCount', JSON.stringify(habitUsageCount));
@@ -409,7 +403,7 @@
       spinner.className = 'loading-spinner';
       submitButton.parentNode.appendChild(spinner);
   
-      const Maxact blad = new Maxact data(form);
+      const formData = new FormData(form);
       const habitData = Object.fromEntries(formData.entries());
   
       // Lägg till i recentHabits och uppdatera visningen
@@ -423,7 +417,7 @@
       // Skicka data till Google Apps Script
       const response = await fetch("https://script.google.com/macros/s/AKfycbyis6zabTJhr6wuxW6XwF7Pm6wzJxHoLiQ2IGYAlGzvrxzswHFArPRbQcvSb2Egc1_a7A/exec", {
         method: "POST",
-        body: Maxact data
+        body: formData
       });
   
       const data = await response.json();
